@@ -472,7 +472,7 @@ img {
             display: none;
         }
 
-        @include mobile {
+        @include tablet-mobile {
             display: none;
         }
     }
