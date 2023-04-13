@@ -1,0 +1,37 @@
+@font-face {
+  font-family: satoshi;
+  src: url("./assets/custom/Satoshi-Variable.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: satoshi, sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+
+.specialOfferContainer {
+  display: flex;
+  flex-direction: row;
+}
+.specialOfferContainer__text {
+  color: green;
+}
+
+.herobanner__mainTitle {
+  font-family: satoshi;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 90px;
+}
+.herobanner__description {
+  font-family: satoshi;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}/*# sourceMappingURL=styles.css.map */
