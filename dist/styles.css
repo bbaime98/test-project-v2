@@ -29,6 +29,12 @@ body {
     padding-right: 340px;
   }
 }
+@media screen and (width: 768px) {
+  .padding-wide {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
   .padding-wide {
     padding-left: 40px;

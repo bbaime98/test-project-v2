@@ -57,6 +57,11 @@ body {
         padding-right: 340px;
     }
 
+    @media screen and (width: 768px) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
     @include tablet {
         padding-left: 40px;
         padding-right: 40px;
