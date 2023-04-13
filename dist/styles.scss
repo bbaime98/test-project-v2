@@ -30,6 +30,7 @@ $color-15: #039855;
 $color-16: #1570EF;
 $color-17: #444CE7;
 $color-18: #DD2590;
+$color-19: rgba(0, 0, 0, 0.72);
 
 
 * {
@@ -288,9 +289,9 @@ img {
 
 // go back navigation section
 .gobackSection {
+    // background: rgba(6, 5, 17, 0.12);
 
     background: $color-5;
-    // background: rgba(6, 5, 17, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(80px);
 
@@ -323,6 +324,22 @@ img {
 //hero banner
 .herobanner {
     background: #060511;
+    position: relative;
+
+    &__leftDecolarion {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // height: 90%;
+
+    }
+
+    &__rightDecolarion {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        // height: 90%;
+    }
 
     &__text {
         color: $color-1;
@@ -453,8 +470,47 @@ img {
     }
 }
 
-//footerContentSection
+//  Content section 
+.contentSection {
+    padding-top: 48px;
+    padding-bottom: 40px;
 
+    &__textContent {
+        margin-top: 41px;
+    }
+
+    &__text {
+        font-weight: 425;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color-19;
+        margin-bottom: 16px;
+
+        // &:last-child {
+        //     margin-bottom: 0;
+        // }
+    }
+
+    &__textBold {
+        font-weight: 700;
+    }
+
+    &__links {
+        padding-left: 12px;
+    }
+
+    a,
+    li {
+        color: $color-8;
+    }
+
+    &__link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+//footerContentSection
 .footerContentSection {
     .padding-wide {
         padding-left: 748px;

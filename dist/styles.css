@@ -246,6 +246,17 @@ img {
 
 .herobanner {
   background: #060511;
+  position: relative;
+}
+.herobanner__leftDecolarion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.herobanner__rightDecolarion {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .herobanner__text {
   color: #FFFFFF;
@@ -352,6 +363,35 @@ img {
 }
 .herobanner__actions-btn:last-child {
   margin-bottom: 0;
+}
+
+.contentSection {
+  padding-top: 48px;
+  padding-bottom: 40px;
+}
+.contentSection__textContent {
+  margin-top: 41px;
+}
+.contentSection__text {
+  font-weight: 425;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.72);
+  margin-bottom: 16px;
+}
+.contentSection__textBold {
+  font-weight: 700;
+}
+.contentSection__links {
+  padding-left: 12px;
+}
+.contentSection a,
+.contentSection li {
+  color: #0560FC;
+}
+.contentSection__link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .footerContentSection .padding-wide {
