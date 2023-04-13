@@ -248,15 +248,33 @@ img {
   background: #060511;
   position: relative;
 }
-.herobanner__leftDecolarion {
+.herobanner__leftDecolation {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.herobanner__rightDecolarion {
+.herobanner__rightDecolation {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media (min-width: 1441px) and (max-width: 2100px) {
+  .herobanner__decolation {
+    width: 500px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .herobanner__decolation {
+    width: 200px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .herobanner__decolation {
+    width: 120px;
+    overflow: hidden;
+  }
 }
 .herobanner__text {
   color: #FFFFFF;
@@ -368,6 +386,22 @@ img {
 .contentSection {
   padding-top: 48px;
   padding-bottom: 40px;
+}
+.contentSection .padding-wide {
+  padding-left: 748px;
+  padding-right: 748px;
+}
+@media (min-width: 1441px) and (max-width: 2100px) {
+  .contentSection .padding-wide {
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .contentSection .padding-wide {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
 }
 .contentSection__textContent {
   margin-top: 41px;

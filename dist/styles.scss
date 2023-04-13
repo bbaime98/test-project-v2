@@ -326,19 +326,33 @@ img {
     background: #060511;
     position: relative;
 
-    &__leftDecolarion {
+    &__leftDecolation {
         position: absolute;
         bottom: 0;
         left: 0;
-        // height: 90%;
-
     }
 
-    &__rightDecolarion {
+    &__rightDecolation {
         position: absolute;
         bottom: 0;
         right: 0;
-        // height: 90%;
+    }
+
+    &__decolation {
+        @include desktop-medium {
+            width: 500px;
+            overflow: hidden;
+        }
+
+        @include desktop {
+            width: 200px;
+            overflow: hidden;
+        }
+
+        @include tablet {
+            width: 120px;
+            overflow: hidden;
+        }
     }
 
     &__text {
@@ -369,7 +383,6 @@ img {
         padding-right: 673px;
 
         @include desktop-medium {
-            // background-color: orangered;
             padding-left: 350px;
             padding-right: 350px;
         }
@@ -475,6 +488,21 @@ img {
     padding-top: 48px;
     padding-bottom: 40px;
 
+    .padding-wide {
+        padding-left: 748px;
+        padding-right: 748px;
+
+        @include desktop-medium {
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
+        @include desktop {
+            padding-left: 108px;
+            padding-right: 108px;
+        }
+    }
+
     &__textContent {
         margin-top: 41px;
     }
@@ -517,7 +545,6 @@ img {
         padding-right: 0;
 
         @include desktop {
-            // background-color: greenyellow;
             padding-left: 108px;
         }
     }
