@@ -16,18 +16,18 @@
   <!-- SPECIAL OFFER -->
   <div class="specialOfferContainer">
     <!-- LEFT -->
-    <div class="specialOfferContainer__left">
+    <div class="specialOfferContainer__left zoomIn-text">
       <div class="specialOfferContainer__text">new</div>
       <div class="iconContainer">
         <img src="./assets/images/local_fire_department.png" alt="special offer">
       </div>
     </div>
     <!-- MIDDLE -->
-    <div class="specialOfferContainer__description">Special Offer - Save up to 40% on all annual plans. <a
+    <div class="specialOfferContainer__description zoomIn-text">Special Offer - Save up to 40% on all annual plans. <a
         target="_blank" href="https://helpjuice.com/pricing">Buy
         Now</a></div>
     <!-- CLOSE ICON -->
-    <div class="specialOfferContainer__closeIconContainer">
+    <div class="specialOfferContainer__closeIconContainer zoomIn-text">
       <img src="./assets/images/close.png" alt="special offer - close">
     </div>
   </div>
@@ -78,14 +78,6 @@
 
   <!-- Hero banner section -->
   <div class="herobanner">
-    <div class="herobanner__leftDecolation">
-      <img class="herobanner__leftGradient herobanner__decolation" src="./assets/svg/left-decolation.svg"
-        alt="special offer - helpjuice logo">
-    </div>
-    <div class="herobanner__rightDecolation">
-      <img class="herobanner__rightGradient herobanner__decolation" src="./assets/svg/right-decolation.svg"
-        alt="special offer - helpjuice logo">
-    </div>
     <div class="herobanner__wrapper padding-wide">
       <!-- Left section -->
       <!-- Middle section -->
@@ -126,12 +118,22 @@
         </div>
       </div>
     </div>
+    <div class="herobanner__leftDecolation">
+      <img class="herobanner__leftGradient herobanner__decolation" src="./assets/svg/left-decolation.svg"
+        alt="special offer - helpjuice logo">
+    </div>
+    <div class="herobanner__rightDecolation">
+      <img class="herobanner__rightGradient herobanner__decolation" src="./assets/svg/right-decolation.svg"
+        alt="special offer - helpjuice logo">
+    </div>
   </div>
 
   <!-- Content section -->
   <div class="contentSection">
     <div class="contentSection__wrapper padding-wide">
-      <img class="contentSection__imgae" src="./assets/svg/blog-screenshot.svg" alt="Blog - helpjuice">
+      <div class="contentSection__imageContainer">
+        <img class="contentSection__image" src="./assets/svg/blog-screenshot.svg" alt="Blog - helpjuice">
+      </div>
       <div class="contentSection__textContent">
         <div class="contentSection__text">
           Imagine the untapped potential that lies within your organization's collective knowledge, just waiting to be
@@ -195,6 +197,29 @@
             </a>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Left popup -->
+    <div class="leftPopup">
+      <div class="leftPopup__imageContainer">
+        <img class="leftPopup__img" src="./assets/images/modal-image.png" alt="helpjuice Discovery">
+        <img class="leftPopup__closeIcon" src="./assets/svg/close-2.svg" alt="helpjuice Discovery">
+      </div>
+      <div class="leftPopup__content">
+        <div class="normal-text leftPopup__contentTitle">
+          Discover the Power of Helpjuice!
+        </div>
+        <div class="leftPopup__contentDescription">
+          Schedule a product demo with us and we'll show you how Helpjuice can improve your customer support while also
+          empowering your staff to do a better job.
+        </div>
+        <div class="leftPopup__btn bg-blue leftPopup__scheduleBtn">
+          Schedule a demo
+        </div>
+        <div class="leftPopup__btn leftPopup__trialBtn">
+          Start your Free Trial
+        </div>
       </div>
     </div>
   </div>
@@ -290,7 +315,8 @@
               Confluence
             </div>
             <div class="footerContentSection__description">
-              Confluence features include team collaboration, document management, knowledge sharing, project planning,
+              Confluence features include team collaboration, document management, knowledge sharing, project
+              planning,
               task tracking, integration, and mobile apps.
             </div>
             <a href="" class="footerContentSection__learnMore">
@@ -304,7 +330,7 @@
         </div>
 
         <!-- Card Item - 4 -->
-        <div class="footerContentSection__card bg-lightBlue">
+        <div class="footerContentSection__card bg-purple">
           <!-- Card - Top section -->
           <div class="footerContentSection__cardTopSection">
             <div class="footerContentSection__logoContainer">
@@ -321,7 +347,8 @@
               Hubspot Service Hub
             </div>
             <div class="footerContentSection__description">
-              HubSpot provides a suite of tools for businesses, including marketing, sales, customer service, analytics,
+              HubSpot provides a suite of tools for businesses, including marketing, sales, customer service,
+              analytics,
               and integrations.
             </div>
             <a href="" class="footerContentSection__learnMore">
@@ -364,10 +391,10 @@
             </a>
           </div>
         </div>
-
-        <!-- slider indicator -->
-        <div class="footerContentSection__sliderIndicator">
-
+      </div>
+      <!-- slider indicator -->
+      <div class="footerContentSection__sliderIndicator">
+        <div class="footerContentSection__sliderIndicator-inner">
         </div>
       </div>
     </div>

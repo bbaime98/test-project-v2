@@ -31,7 +31,7 @@ $color-16: #1570EF;
 $color-17: #444CE7;
 $color-18: #DD2590;
 $color-19: rgba(0, 0, 0, 0.72);
-
+$color-20: #344054;
 
 * {
     margin: 0;
@@ -50,36 +50,29 @@ body {
     @include desktop-l {
         padding-left: 680.8px;
         padding-right: 680px;
-        // background-color: green;
     }
 
     @include desktop {
-        // background-color: red;
         padding-left: 340.8px;
         padding-right: 340px;
     }
 
-    // @include desktop-medium {
-    //     background-color: orangered;
-    //     padding-left: 200.8px;
-    //     padding-right: 200px;
-    // }
-
     @include tablet {
-        // background-color: yellow;
-        padding-left: 170.8px;
-        padding-right: 170px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 .container-default {
-    // padding-left: 680.8px;
-    // padding-right: 680px;
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
     margin-left: auto;
-    // max-width: 2560px;
     max-width: auto;
 }
 
@@ -91,8 +84,6 @@ body {
 img {
     object-fit: cover;
     font-family: 'object-fit: cover';
-    // height: 100%;
-    // width: 100%;
 }
 
 .btn {
@@ -100,6 +91,7 @@ img {
     font-size: 14px;
     line-height: 20px;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .bg-blue {
@@ -122,6 +114,11 @@ img {
     background: $color-18;
 }
 
+.zoomIn-text {
+    animation: zoomIn 0.5s ease-out;
+    transform-origin: center;
+}
+
 // special offer
 .specialOfferContainer {
     background-image: url("./assets//images/Rectangle\ 85.png");
@@ -130,6 +127,15 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @include tablet-mobile {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        height: auto;
+
+    }
 
     &__left {
         background: $color-4;
@@ -166,13 +172,6 @@ img {
     }
 }
 
-// .mainContainer {
-//     background-image: url("./assets//svg/Banner-Background.svg");
-//     background-repeat: no-repeat;
-//     width: 2559px;
-//     height: 652px;
-// }
-
 // Navbar
 .mainNavbar {
     background: $color-5;
@@ -185,10 +184,18 @@ img {
     align-items: center;
     justify-content: center;
 
+    @include tablet-mobile {
+        flex-direction: column;
+    }
+
     &__logoSection {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        @include tablet-mobile {
+            width: 90%;
+        }
     }
 
     &__logoContainer {
@@ -211,9 +218,18 @@ img {
             text-decoration: none;
             padding-right: 32px;
 
+            @include tablet-mobile {
+                padding-right: 16px;
+            }
+
             &:last-child {
                 padding-right: 0;
             }
+        }
+
+        @include tablet-mobile {
+            margin: 20px 20px 20px auto;
+            width: 88%;
         }
     }
 
@@ -221,6 +237,15 @@ img {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        @include tablet {
+            justify-content: flex-end;
+            width: 96%;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__actionBtns {
@@ -228,6 +253,10 @@ img {
         flex-direction: row;
         justify-content: center;
         margin-right: 32px;
+
+        @include mobile {
+            width: 90%;
+        }
     }
 
     &__actionBtn {
@@ -240,6 +269,7 @@ img {
         color: $color-1;
         position: relative;
         margin-right: 48px;
+        cursor: pointer;
 
         &::after {
             position: absolute;
@@ -255,6 +285,18 @@ img {
 
     &__demoBtn {
         color: $color-1;
+        background-image: url("./assets/images/btn-gradient.png");
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-image: url("./assets/images/btn-gradient.png");
+            display: block;
+        }
     }
 
 
@@ -267,6 +309,11 @@ img {
         border-radius: 8px;
         padding: 4px 4px 4px 13.67px;
 
+        @include tablet-mobile {
+            margin-top: 20px;
+
+        }
+
         input {
             color: $color-7;
             font-weight: 600;
@@ -277,27 +324,46 @@ img {
             border-style: hidden;
             margin-left: 9.67px;
             margin-right: 8px;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 16px;
+            }
+
         }
 
         &-btn {
             background-color: $color-8;
             padding: 6px 14px;
             color: $color-1;
+
+            @include tablet-mobile {
+                padding: 3px 7px;
+            }
         }
     }
 }
 
-// go back navigation section
+// go to blogs navigation section
 .gobackSection {
-    // background: rgba(6, 5, 17, 0.12);
 
     background: $color-5;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(80px);
+    cursor: pointer;
 
     .padding-wide {
         @include desktop {
             padding-left: 120px;
+        }
+
+        @include tablet-mobile {
+            padding-left: 40px;
+        }
+
+        @include mobile {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -326,33 +392,61 @@ img {
     background: #060511;
     position: relative;
 
+    .padding-wide {
+        padding-left: 748px;
+        padding-right: 673px;
+
+        @include desktop-medium {
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
+        @include desktop {
+            padding-left: 108px;
+            padding-right: 108px;
+        }
+
+        @include mobile {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
     &__leftDecolation {
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__rightDecolation {
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @include tablet-mobile {
+            display: none;
+        }
     }
 
     &__decolation {
-        @include desktop-medium {
-            width: 500px;
-            overflow: hidden;
-        }
+        // @include desktop-medium {
+        //     width: 500px;
+        //     overflow: hidden;
+        // }
 
         @include desktop {
-            width: 200px;
+            width: 630px;
             overflow: hidden;
         }
 
-        @include tablet {
-            width: 120px;
-            overflow: hidden;
-        }
+        // @include tablet {
+        //     width: 120px;
+        //     overflow: hidden;
+        // }
     }
 
     &__text {
@@ -378,35 +472,22 @@ img {
         }
     }
 
-    .padding-wide {
-        padding-left: 748px;
-        padding-right: 673px;
-
-        @include desktop-medium {
-            padding-left: 350px;
-            padding-right: 350px;
-        }
-
-        @include desktop {
-            padding-left: 108px;
-            padding-right: 108px;
-        }
-
-        @include tablet {
-            padding-left: 80px;
-            padding-right: 80px;
-        }
-    }
-
-
     &__wrapper {
         padding-top: 80px;
         padding-bottom: 80px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        // padding-left: 231px;
-        // padding-right: -7px;
+
+        @include mobile {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__middle {
+        position: relative;
+        z-index: 20;
     }
 
     &__mainTitle {
@@ -415,6 +496,11 @@ img {
         font-weight: 700;
         font-size: 72px;
         line-height: 90px;
+
+        @include mobile {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 
     &__description {
@@ -427,7 +513,6 @@ img {
     }
 
     &__details {
-        // background: red;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -440,11 +525,24 @@ img {
         span {
             color: $color-11;
             margin-right: 5px;
+
+            @include mobile {
+                margin-right: 3px;
+            }
+        }
+
+        @include mobile {
+            margin-right: 18px;
         }
     }
 
     &__date {
         margin-right: 36px;
+
+        @include mobile {
+            margin-right: 18px;
+        }
+
     }
 
     &__readTime {
@@ -457,15 +555,15 @@ img {
             width: 100%;
             display: block;
             position: absolute;
-            // margin-bottom: 93px;
             right: 0;
             top: 100%;
         }
     }
 
     &__actions {
-        // background-color: yellow;
         margin-left: 28px;
+        position: relative;
+        z-index: 20;
 
         &-btn {
             padding: 15.76px;
@@ -479,12 +577,26 @@ img {
             &:last-child {
                 margin-bottom: 0;
             }
+
+            @include mobile {
+                padding: 8px;
+                margin-bottom: 12px;
+                background: $color-12;
+                z-index: 30;
+                bottom: 30px;
+            }
+        }
+
+        @include mobile {
+            margin-left: 0;
+            position: fixed;
         }
     }
 }
 
 //  Content section 
 .contentSection {
+    position: relative;
     padding-top: 48px;
     padding-bottom: 40px;
 
@@ -501,10 +613,35 @@ img {
             padding-left: 108px;
             padding-right: 108px;
         }
+
+        @include tablet {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include mobile {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__textContent {
         margin-top: 41px;
+    }
+
+    &__imageContainer {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include desktop {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -513,10 +650,6 @@ img {
         line-height: 28px;
         color: $color-19;
         margin-bottom: 16px;
-
-        // &:last-child {
-        //     margin-bottom: 0;
-        // }
     }
 
     &__textBold {
@@ -540,12 +673,28 @@ img {
 
 //footerContentSection
 .footerContentSection {
+
     .padding-wide {
         padding-left: 748px;
         padding-right: 0;
 
+        @include desktop-medium {
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
         @include desktop {
             padding-left: 108px;
+        }
+
+        @include tablet {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include mobile {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -560,6 +709,11 @@ img {
         font-size: 48px;
         line-height: 60px;
         color: $color-12;
+
+        @include tablet-mobile {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 
     &__subTitle {
@@ -581,6 +735,8 @@ img {
             // width: 70%;
         }
 
+        @include mobile {}
+
     }
 
     &__card {
@@ -590,8 +746,29 @@ img {
         box-sizing: border-box;
         margin-right: 32px;
 
+        @include mobile {
+            height: 380px;
+        }
+
         &:last-child {
             margin-right: 0;
+        }
+
+        &:nth-child(4) {
+
+            .footerContentSection__cardTopSection {
+                margin-bottom: 68px;
+            }
+
+            .footerContentSection__cardContentContainer {
+                height: 324px;
+            }
+        }
+
+        &:nth-child(5) {
+            .footerContentSection__cardTopSection {
+                margin-bottom: 69px;
+            }
         }
     }
 
@@ -601,6 +778,11 @@ img {
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 70px;
+
+        @include mobile {
+            margin-bottom: 35px;
+        }
+
     }
 
     &__cardTopText {
@@ -609,6 +791,11 @@ img {
         line-height: 38px;
         color: $color-1;
         margin-left: 13px;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 
     &__cardContentContainer {
@@ -619,6 +806,11 @@ img {
         background: rgba(255, 255, 255, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(12px);
+
+        @include mobile {
+            padding: 16px 12px;
+            height: 250px;
+        }
     }
 
     &__cardTitle {
@@ -626,6 +818,11 @@ img {
         font-size: 30px;
         line-height: 38px;
         color: $color-1;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 
     &__description {
@@ -634,9 +831,8 @@ img {
         line-height: 28px;
         color: $color-1;
         margin-top: 16px;
-        // margin-bottom: 32px;
 
-        @include desktop {
+        @include mobile {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -659,5 +855,142 @@ img {
         line-height: 24px;
         color: $color-1;
         margin-right: 8px;
+    }
+
+    &__sliderIndicator {
+        width: 1064px;
+        height: 8px;
+        background: #EAECF0;
+        border-radius: 12px;
+        position: relative;
+        margin-top: 48px;
+
+        @include desktop {
+            width: 700px;
+        }
+
+        &-inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 8px;
+            width: 218px;
+            background: $color-12;
+            border-radius: 100px;
+        }
+    }
+}
+
+// leftPopup
+.leftPopup {
+    position: absolute;
+    left: 24px;
+    top: 179px;
+    height: 200px;
+    width: 400px;
+    border-radius: 12px;
+    z-index: 20;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+    animation: slide 0.5s forwards;
+
+    @include tablet-mobile {
+        height: 150px;
+        width: 350px;
+    }
+
+    @include mobile {
+        width: 90%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        z-index: 18;
+    }
+
+    &__imageContainer {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .leftPopup__img {
+            border-radius: 12px 12px 0 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 24px;
+        box-sizing: border-box;
+        background: $color-1;
+        box-sizing: border-box;
+        box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+        border-radius: 0 0 12px 12px;
+
+        @include tablet-mobile {
+            padding: 16px;
+        }
+    }
+
+    &__contentTitle {
+        font-weight: 700;
+        color: $color-12;
+    }
+
+    &__contentDescription {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-13;
+        margin-top: 4px;
+        margin-bottom: 20px;
+
+    }
+
+    &__btn {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    &__scheduleBtn {
+        color: $color-1;
+        margin-bottom: 12px;
+    }
+
+    &__trialBtn {
+        color: $color-20;
+        border: 1px solid #D0D5DD;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    }
+
+    &__closeIcon {
+        position: absolute;
+        right: -8px;
+        top: -11px;
+        cursor: pointer;
+    }
+}
+
+// Slide & scale animation
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
