@@ -1,0 +1,50 @@
+Arguments: 
+  /Users/bienaimebyiringiro/.nvm/versions/node/v16.15.1/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add gh-pages
+
+PATH: 
+  /Users/bienaimebyiringiro/.nvm/versions/node/v16.15.1/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/bienaimebyiringiro/.nvm/versions/node/v16.15.1/bin:/usr/local/Caskroom/miniforge/base/bin:/usr/local/Caskroom/miniforge/base/condabin:/Users/bienaimebyiringiro/.sdkman/candidates/java/current/bin:/Users/bienaimebyiringiro/.sdkman/candidates/gradle/current/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/bienaimebyiringiro/Library/Android/sdk/emulator:/Users/bienaimebyiringiro/Library/Android/sdk/tools:/Users/bienaimebyiringiro/Library/Android/sdk/tools/bin:/Users/bienaimebyiringiro/Library/Android/sdk/platform-tools:/Users/bienaimebyiringiro/FlutterDev/flutter/bin:/Users/bienaimebyiringiro/Library/Android/sdk/emulator:/Users/bienaimebyiringiro/Library/Android/sdk/tools:/Users/bienaimebyiringiro/Library/Android/sdk/tools/bin:/Users/bienaimebyiringiro/Library/Android/sdk/platform-tools:/Users/bienaimebyiringiro/FlutterDev/flutter/bin:/Users/bienaimebyiringiro/FlutterDev/flutter/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/bienaimebyiringiro/Desktop/code/test-project-v2/package.json: Unexpected token } in JSON at position 230
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "test-project-v2",
+    "version": "1.0.0",
+    "description": "Bien's FE test project 2",
+    "main": "index.js",
+    "scripts": {
+      "deploy": "gh-pages -d dist",
+      "test": "echo \"Error: no test specified\" && exit 1",
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/bbaime98/test-project-v2.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/bbaime98/test-project-v2/issues"
+    },
+    "homepage": "https://github.com/bbaime98/test-project-v2#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
