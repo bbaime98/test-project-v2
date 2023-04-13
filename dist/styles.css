@@ -740,8 +740,12 @@ img {
 .footerContentSection__cardsContainer::-webkit-scrollbar-track {
   background-color: #EAECF0;
   border-radius: 100vw;
-  margin-block: 1200px;
   margin-right: 740px;
+}
+@media (max-width: 1024px) {
+  .footerContentSection__cardsContainer::-webkit-scrollbar-track {
+    margin-right: 0;
+  }
 }
 .footerContentSection__cardsContainer::-webkit-scrollbar-thumb {
   border: 8px solid #101828;
