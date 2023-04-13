@@ -23,6 +23,14 @@ $color-8: #0560FC;
 $color-9: #919196;
 $color-10: #12B76A;
 $color-11: #857f90;
+$color-12: #101828;
+$color-13: #475467;
+$color-14: #F8FAFC;
+$color-15: #039855;
+$color-16: #1570EF;
+$color-17: #444CE7;
+$color-18: #DD2590;
+
 
 * {
     margin: 0;
@@ -91,6 +99,26 @@ img {
     font-size: 14px;
     line-height: 20px;
     border-radius: 6px;
+}
+
+.bg-blue {
+    background: $color-8;
+}
+
+.bg-green {
+    background: $color-15;
+}
+
+.bg-lightBlue {
+    background: $color-16;
+}
+
+.bg-purple {
+    background: $color-17;
+}
+
+.bg-pink {
+    background: $color-18;
 }
 
 // special offer
@@ -262,6 +290,15 @@ img {
 .gobackSection {
 
     background: $color-5;
+    // background: rgba(6, 5, 17, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(80px);
+
+    .padding-wide {
+        @include desktop {
+            padding-left: 120px;
+        }
+    }
 
     &__container {
         display: flex;
@@ -413,5 +450,131 @@ img {
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+//footerContentSection
+
+.footerContentSection {
+    .padding-wide {
+        padding-left: 748px;
+        padding-right: 0;
+
+        @include desktop {
+            // background-color: greenyellow;
+            padding-left: 108px;
+        }
+    }
+
+    &__wraper {
+        background: $color-14;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        color: $color-12;
+    }
+
+    &__subTitle {
+        font-weight: 425;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color-13;
+        margin-top: 8px;
+        margin-bottom: 40px;
+    }
+
+    &__cardsContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: auto;
+
+        @include desktop-medium {
+            // width: 70%;
+        }
+
+    }
+
+    &__card {
+        width: 384px;
+        height: 480px;
+        padding: 34px 24px 24px;
+        box-sizing: border-box;
+        margin-right: 32px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__cardTopSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 70px;
+    }
+
+    &__cardTopText {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        color: $color-1;
+        margin-left: 13px;
+    }
+
+    &__cardContentContainer {
+        width: 336px;
+        height: 314px;
+        padding: 32px 24px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(12px);
+    }
+
+    &__cardTitle {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        color: $color-1;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color-1;
+        margin-top: 16px;
+        // margin-bottom: 32px;
+
+        @include desktop {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+        }
+    }
+
+    &__learnMore {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 32px;
+    }
+
+    &__learnMoreText {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-1;
+        margin-right: 8px;
     }
 }
