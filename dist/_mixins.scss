@@ -16,17 +16,18 @@ $mobile-extra-small: 375px;
   }
 }
 
+@mixin desktop-medium {
+  @media (min-width: 1441px) and (max-width: 2100px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: 1025px) and (max-width: #{$desktop-large}) {
     @content;
   }
 }
 
-@mixin only-desktop {
-  @media (min-width: 1025px) {
-    @content;
-  }
-}
 
 @mixin tablet {
   @media (min-width: 769px) and (max-width: #{$tablet}) {

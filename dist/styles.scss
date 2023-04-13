@@ -21,6 +21,8 @@ $color-6: rgba(255, 255, 255, 0.12);
 $color-7: rgba(255, 255, 255, 0.56);
 $color-8: #0560FC;
 $color-9: #919196;
+$color-10: #12B76A;
+$color-11: #857f90;
 
 * {
     margin: 0;
@@ -35,8 +37,30 @@ body {
 
 // Generic styles
 .padding-wide {
-    padding-left: 680.8px;
-    padding-right: 680px;
+
+    @include desktop-l {
+        padding-left: 680.8px;
+        padding-right: 680px;
+        // background-color: green;
+    }
+
+    @include desktop {
+        // background-color: red;
+        padding-left: 340.8px;
+        padding-right: 340px;
+    }
+
+    // @include desktop-medium {
+    //     background-color: orangered;
+    //     padding-left: 200.8px;
+    //     padding-right: 200px;
+    // }
+
+    @include tablet {
+        // background-color: yellow;
+        padding-left: 170.8px;
+        padding-right: 170px;
+    }
 }
 
 .container-default {
@@ -48,17 +72,6 @@ body {
     margin-left: auto;
     // max-width: 2560px;
     max-width: auto;
-    background-color: red;
-
-    // @include tablet {
-    //     padding-right: 60px;
-    //     padding-left: 60px;
-    // }
-
-    // @include mobile-l {
-    //     padding-right: 20px;
-    //     padding-left: 20px;
-    // }
 }
 
 .normal-text {
@@ -287,12 +300,37 @@ img {
             margin-left: 16px;
             background: $color-1;
         }
+
+        &:nth-child(3) {
+
+            &::after {
+                content: "";
+                background: $color-10;
+            }
+        }
     }
 
     .padding-wide {
         padding-left: 748px;
         padding-right: 673px;
+
+        @include desktop-medium {
+            // background-color: orangered;
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+
+        @include desktop {
+            padding-left: 108px;
+            padding-right: 108px;
+        }
+
+        @include tablet {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
     }
+
 
     &__wrapper {
         padding-top: 80px;
@@ -331,10 +369,31 @@ img {
     &__authorName {
         margin-left: 16px;
         margin-right: 36px;
+
+        span {
+            color: $color-11;
+            margin-right: 5px;
+        }
     }
 
     &__date {
         margin-right: 36px;
+    }
+
+    &__readTime {
+        position: relative;
+
+        &::after {
+            content: "";
+            background: $color-10;
+            height: 2px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            // margin-bottom: 93px;
+            right: 0;
+            top: 100%;
+        }
     }
 
     &__actions {
@@ -348,6 +407,7 @@ img {
             backdrop-filter: blur(20px);
             border-radius: 8px;
             margin-bottom: 24px;
+            cursor: pointer;
 
             &:last-child {
                 margin-bottom: 0;

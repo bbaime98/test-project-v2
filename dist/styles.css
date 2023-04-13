@@ -17,9 +17,23 @@ body {
   background: #ffffff;
 }
 
-.padding-wide {
-  padding-left: 680.8px;
-  padding-right: 680px;
+@media (min-width: 1441px) {
+  .padding-wide {
+    padding-left: 680.8px;
+    padding-right: 680px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .padding-wide {
+    padding-left: 340.8px;
+    padding-right: 340px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .padding-wide {
+    padding-left: 170.8px;
+    padding-right: 170px;
+  }
 }
 
 .container-default {
@@ -28,7 +42,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: auto;
-  background-color: red;
 }
 
 .normal-text {
@@ -219,9 +232,31 @@ img {
   margin-left: 16px;
   background: #FFFFFF;
 }
+.herobanner__text:nth-child(3)::after {
+  content: "";
+  background: #12B76A;
+}
 .herobanner .padding-wide {
   padding-left: 748px;
   padding-right: 673px;
+}
+@media (min-width: 1441px) and (max-width: 2100px) {
+  .herobanner .padding-wide {
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .herobanner .padding-wide {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .herobanner .padding-wide {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 .herobanner__wrapper {
   padding-top: 80px;
@@ -254,8 +289,25 @@ img {
   margin-left: 16px;
   margin-right: 36px;
 }
+.herobanner__authorName span {
+  color: #857f90;
+  margin-right: 5px;
+}
 .herobanner__date {
   margin-right: 36px;
+}
+.herobanner__readTime {
+  position: relative;
+}
+.herobanner__readTime::after {
+  content: "";
+  background: #12B76A;
+  height: 2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
 .herobanner__actions {
   margin-left: 28px;
@@ -268,6 +320,7 @@ img {
           backdrop-filter: blur(20px);
   border-radius: 8px;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 .herobanner__actions-btn:last-child {
   margin-bottom: 0;
