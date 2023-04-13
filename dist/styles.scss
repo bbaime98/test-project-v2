@@ -60,6 +60,7 @@ body {
     @include tablet {
         padding-left: 40px;
         padding-right: 40px;
+
     }
 
     @include mobile {
@@ -446,6 +447,16 @@ img {
             padding-right: 108px;
         }
 
+        @media screen and (max-width: 762px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include tablet {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
         @include mobile {
             padding-left: 20px;
             padding-right: 20px;
@@ -457,6 +468,10 @@ img {
         bottom: 0;
         left: 0;
 
+        @media screen and (max-width: 762px) {
+            display: none;
+        }
+
         @include mobile {
             display: none;
         }
@@ -467,26 +482,21 @@ img {
         bottom: 0;
         right: 0;
 
+        @media screen and (max-width: 762px) {
+            display: none;
+        }
+
         @include tablet-mobile {
             display: none;
         }
     }
 
     &__decolation {
-        // @include desktop-medium {
-        //     width: 500px;
-        //     overflow: hidden;
-        // }
 
         @include desktop {
             width: 630px;
             overflow: hidden;
         }
-
-        // @include tablet {
-        //     width: 120px;
-        //     overflow: hidden;
-        // }
     }
 
     &__text {
@@ -654,6 +664,11 @@ img {
             padding-right: 108px;
         }
 
+        @media screen and (max-width: 762px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
         @include tablet {
             padding-left: 40px;
             padding-right: 40px;
@@ -725,6 +740,11 @@ img {
 
         @include desktop {
             padding-left: 108px;
+        }
+
+        @media screen and (max-width: 762px) {
+            padding-left: 40px;
+            padding-right: 40px;
         }
 
         @include tablet {
