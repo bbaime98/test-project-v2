@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "./mixins";
 
 // ****** INCLUDE THE CUSTOM FONT *******
 
@@ -16,6 +16,11 @@ $color-1: #FFFFFF;
 $color-2: #F1F9FF;
 $color-3: rgba(6, 5, 17, 0.12);
 $color-4: rgba(255, 255, 255, 0.16);
+$color-5: #060511;
+$color-6: rgba(255, 255, 255, 0.12);
+$color-7: rgba(255, 255, 255, 0.56);
+$color-8: #0560FC;
+$color-9: #919196;
 
 * {
     margin: 0;
@@ -28,6 +33,54 @@ body {
     background: #ffffff;
 }
 
+// Generic styles
+.padding-wide {
+    padding-left: 680.8px;
+    padding-right: 680px;
+}
+
+.container-default {
+    // padding-left: 680.8px;
+    // padding-right: 680px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    // max-width: 2560px;
+    max-width: auto;
+    background-color: red;
+
+    // @include tablet {
+    //     padding-right: 60px;
+    //     padding-left: 60px;
+    // }
+
+    // @include mobile-l {
+    //     padding-right: 20px;
+    //     padding-left: 20px;
+    // }
+}
+
+.normal-text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img {
+    object-fit: cover;
+    font-family: 'object-fit: cover';
+    // height: 100%;
+    // width: 100%;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 6px;
+}
+
+// special offer
 .specialOfferContainer {
     background-image: url("./assets//images/Rectangle\ 85.png");
     height: 48px;
@@ -71,18 +124,234 @@ body {
     }
 }
 
+// .mainContainer {
+//     background-image: url("./assets//svg/Banner-Background.svg");
+//     background-repeat: no-repeat;
+//     width: 2559px;
+//     height: 652px;
+// }
+
+// Navbar
+.mainNavbar {
+    background: $color-5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(80px);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__logoSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__logoContainer {
+        height: 32px;
+        width: 32px;
+        margin-right: 16.8px;
+    }
+
+    &__companyName {}
+
+    &__menuContainer {
+        margin-left: 48px;
+        margin-right: 89.2px;
+
+        a {
+            color: $color-1;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: none;
+            padding-right: 32px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__leftSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__actionBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 32px;
+    }
+
+    &__actionBtn {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__signBtn {
+        color: $color-1;
+        position: relative;
+        margin-right: 48px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            margin-left: 24px;
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            width: 2px;
+            background: $color-6;
+        }
+    }
+
+    &__demoBtn {
+        color: $color-1;
+    }
+
+
+    &__getStarted {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid $color-6;
+        filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
+        border-radius: 8px;
+        padding: 4px 4px 4px 13.67px;
+
+        input {
+            color: $color-7;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            background: transparent;
+            outline: none;
+            border-style: hidden;
+            margin-left: 9.67px;
+            margin-right: 8px;
+        }
+
+        &-btn {
+            background-color: $color-8;
+            padding: 6px 14px;
+            color: $color-1;
+        }
+    }
+}
+
+// go back navigation section
+.gobackSection {
+
+    background: $color-5;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    &__arrowIcon {
+        margin-right: 20.42px;
+    }
+
+    &__text {
+        color: $color-1;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+//hero banner
 .herobanner {
+    background: #060511;
+
+    &__text {
+        color: $color-1;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            margin-left: 16px;
+            background: $color-1;
+        }
+    }
+
+    .padding-wide {
+        padding-left: 748px;
+        padding-right: 673px;
+    }
+
+    &__wrapper {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // padding-left: 231px;
+        // padding-right: -7px;
+    }
+
     &__mainTitle {
         font-family: satoshi;
+        color: $color-1;
         font-weight: 700;
         font-size: 72px;
         line-height: 90px;
     }
 
     &__description {
-        font-family: satoshi;
+        color: $color-9;
         font-weight: 500;
         font-size: 18px;
         line-height: 28px;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+
+    &__details {
+        // background: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__authorName {
+        margin-left: 16px;
+        margin-right: 36px;
+    }
+
+    &__date {
+        margin-right: 36px;
+    }
+
+    &__actions {
+        // background-color: yellow;
+        margin-left: 28px;
+
+        &-btn {
+            padding: 15.76px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
