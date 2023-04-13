@@ -16,11 +16,41 @@ body {
 }
 
 .specialOfferContainer {
+  background-image: url("./assets//images/Rectangle 85.png");
+  height: 48px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.specialOfferContainer__left {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  width: 70px;
+  height: 24px;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.specialOfferContainer__description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-left: 16px;
+  margin-right: 21px;
+}
+.specialOfferContainer__description a {
+  text-decoration: underline;
+  color: #FFFFFF;
 }
 .specialOfferContainer__text {
-  color: green;
+  color: #F1F9FF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: capitalize;
 }
 
 .herobanner__mainTitle {

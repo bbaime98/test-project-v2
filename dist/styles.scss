@@ -11,6 +11,12 @@
 
 // **** CUSTOM FONT - END *******
 
+// **** VARIABLES ****
+$color-1: #FFFFFF;
+$color-2: #F1F9FF;
+$color-3: rgba(6, 5, 17, 0.12);
+$color-4: rgba(255, 255, 255, 0.16);
+
 * {
     margin: 0;
     padding: 0;
@@ -23,11 +29,45 @@ body {
 }
 
 .specialOfferContainer {
+    background-image: url("./assets//images/Rectangle\ 85.png");
+    height: 48px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__left {
+        background: $color-4;
+        border-radius: 16px;
+        width: 70px;
+        height: 24px;
+        padding: 2px 8px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__description {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-1;
+        margin-left: 16px;
+        margin-right: 21px;
+
+        a {
+            text-decoration: underline;
+            color: $color-1;
+
+        }
+    }
 
     &__text {
-        color: green;
+        color: $color-2;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: capitalize;
     }
 }
 
