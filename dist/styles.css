@@ -963,6 +963,7 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   cursor: pointer;
+  border-radius: 6px;
 }
 .leftPopup__scheduleBtn {
   color: #FFFFFF;
